@@ -1,39 +1,50 @@
 @import '~antd/dist/antd.css';
+#root{
+  height: 100%;
+}
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.content_layout{
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+  width: 8px; /*滚动条宽度*/
+  height: 8px; /*滚动条高度*/
+  background-color: #efefef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 2px; /*滚动条的圆角*/
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(229, 229, 225, 0.62); /*滚动条的背景颜色*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.ant-layout-sider{
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  background: #248ef1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-layout-header {
+  height: 64px;
+  padding: 0 50px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 64px;
+  background: #a09f9f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-layout-footer {
+  padding: 24px 50px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  background: #a09f9f;
 }
